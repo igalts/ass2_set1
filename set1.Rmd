@@ -1,0 +1,66 @@
+---
+title: "Assignment 2"
+author: "igal tsirulnik, Yoni Elhanati"
+date: "April 11, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(ggmap)
+
+
+```
+
+## Description of the dataset-
+data contained in this set pertain to vehicular accident and crash locations from 2010 to 2014 in the District of Columbia. Data is provided by the District of Columbia's Metropolitan Police Department (MPD) along with the Department of Transportation (DDOT) and the University of Colorado at Boulder. It is a partial data and conaints the following fields:
+LATITUDE| LONGITUDE| ACCIDENTDATE YEAR| DAYOFWEEK| ACCIDENTTYPE| FEETFROMINTERSECTION| ROADSURFACE| ROADCONDITION| STREETLIGHT| LIGHTCONDITION| |EATHER| TRAFFICCONDITION
+
+## Here you can see a small tase of the dataset-
+```{r 1 name}
+f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+head(f,5)
+```
+
+## Dataset on a map-
+```{r 2 name}
+f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+# getting the map
+map <- get_map(location = c(lon = mean(f$LONGITUDE), lat = mean(f$LATITUDE)), zoom = 12,maptype = "satellite", scale = 2)
+# plotting the map with some points on it
+ggmap(map) +
+  geom_point(data = f, aes(x = LONGITUDE, y = LATITUDE , alpha = 0), size = 2, shape = 21) +  guides(fill=FALSE, alpha=FALSE, size=FALSE)
+
+```
+
+
+## analysis of accident by year -
+```{r 3 name}
+f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+barplot(table(f$YEAR))
+#we can see that after a slow rise in accidents 2015 was the year where they went down for the first time
+```
+
+## analysis of sevitity of accident by road light condition-
+```{r 4 name}
+f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+qplot(LATITUDE, LONGITUDE, data=f, color = ACCIDENTTYPE,facets = ~LIGHTCONDITION)
+# we can see that accidents that happen with problematic light condition preduce more injeries than other accidents in precentage
+```
+
+## analysis of accident by year day of the week-
+```{r 5 name}
+f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+barplot(table(f$DAYOFWEEK))
+#as expected sunday is the day with the lest accidents
+
+## analysis of sevitity of accident by roud light condition-
+```{r 6 name}
+f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+with(f,plot(ACCIDENTDATE,FEETFROMINTERSECTION))
+#almost all of the accidents happen within 10 feet from intersections
+```
+
+##Summury
+Most of the accidents happen near inter section, we should be concentrating our efforts of providing the bes?? light and roud conditon around those areas
