@@ -3,7 +3,7 @@ LATITUDE,LONGITUDE,ACCIDENTDATE,YEAR,DAYOFWEEK,ACCIDENTTYPE,FEETFROMINTERSECTION
 38.917122,-77.041893,23-Oct-10,2010,Saturday,Prop. Damage,75,Concrete,Dry,Street Lights On,Dark (Lighted),Clear,Medium
 38.912037,-77.04525,21-Aug-10,2010,Saturday,Injury,50,Asphalt,Dry,Street Lights Off,Daylight,Clear,Light
 38.894314,-77.016542,25-May-13,2013,Saturday,Injury,0,Concrete,Dry, ,Daylight,Other,Light
-38.835983,-76.995743,6-Jul-11,2011,Wednesday,Injury,0,Asphalt,Dry,Street Lights Off,Daylight,Clear,Light
+38.835983,-76.995743,6-Jul-11,2011,sunday,Injury,0,Asphalt,Dry,Street Lights Off,Daylight,Clear,Light
 38.953198,-77.033051,27-Mar-11,2011,Sunday,Prop. Damage,50,Asphalt,Dry,Street Lights Off,Daylight,Clear,Light
 38.92243,-77.0297,20-Nov-13,2013,Wednesday,Injury,0,Asphalt,Dry,Street Lights Off,Daylight,Clear,Medium
 38.854286,-76.985206,23-Jun-10,2010,Wednesday,Injury,5,Asphalt,Dry,Street Lights Off,Daylight,Clear,Heavy
