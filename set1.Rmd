@@ -2,7 +2,7 @@
 title: "Assignment 2"
 author: "igal tsirulnik, Yoni Elhanati"
 date: "April 11, 2016"
-output: html_document
+output: html_docuaament
 ---
 
 ```{r setup, include=FALSE}
