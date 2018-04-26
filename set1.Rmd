@@ -26,7 +26,7 @@ head(f,5)
 ## Dataset on a map-
 ```{r 2 name}
 f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
-# getting the map
+# getting the mapzxc
 map <- get_map(location = c(lon = mean(f$LONGITUDE), lat = mean(f$LATITUDE)), zoom = 12,maptype = "satellite", scale = 2)
 # plotting the map with some points on it
 ggmap(map) +
@@ -57,7 +57,7 @@ barplot(table(f$DAYOFWEEK))
 
 ## analysis of sevitity of accident by roud light condition-
 ```{r 6 name}
-f<- read.csv('C:\\Users\\igal\\Desktop\\data\\v_smal.csv')
+f<- read.csv('C:\\Users\\igal\\Dasdasdesktop\\data\\v_smal.csv')
 with(f,plot(ACCIDENTDATE,FEETFROMINTERSECTION))
 #almost all of the accidents happen within 10 feet from intersections
 ```
